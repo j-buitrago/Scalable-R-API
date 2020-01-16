@@ -67,3 +67,37 @@ minikube start
 eval $(minikube docker-env)
 kubectl apply -f deployment.yaml
 ```
+You can check you have a pod named plumber-exmaple-... running:
+
+```
+kubectl get pods --output=wide
+```
+
+We have to expose our service for being able to consume our API.
+
+```
+kubectl expose deployment plumber-example --type=LoadBalancer --name=plumber-service
+```
+
+Using minikube you can now ip and port of the API running
+
+```
+minikube service plumber-service
+```
+
+If you are not using minikube just execute:
+
+```
+kubectl describe services plumber-service
+```
+
+what happens if we now use our ```asynchronousTest``` to check our API? At this moment our API is still synchronous, but here is when we can use kubernetes to scale it! Execute this command and try again:
+
+```
+kubectl scale deployment/plumber-example --replicas=3
+```
+
+At this point you would have an asynchronous API thanks to Kubernetes! To check that you have three different pods running execute ```kubectl get pods --output=wide``` and you would see this:
+
+
+
