@@ -26,7 +26,12 @@ docker pull rocker/r-ver:3.5.0
 ```
 
 - Now we can create our docker container with our Plumber API. Necessary information to build the container is in 
-```./dockerfile```
+```./Dockerfile```
 ```
 docker build -t plumber-example .
+```
+
+- Now we can try our container
+```
+docker run --rm -p 8000:8000 plumber-example
 ```
