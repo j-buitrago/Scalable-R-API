@@ -99,5 +99,6 @@ kubectl scale deployment/plumber-example --replicas=3
 
 At this point you would have an asynchronous API thanks to Kubernetes! To check that you have three different pods running execute ```kubectl get pods --output=wide``` and you would see this:
 
+![ThreePods](https://github.com/j-buitrago/Scalable-R-API/blob/master/images/ThreePods.png)
 
 
