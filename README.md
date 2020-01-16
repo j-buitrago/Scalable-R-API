@@ -31,7 +31,8 @@ docker pull rocker/r-ver:3.5.0
 docker build -t plumber-example .
 ```
 
-- Now we can try our container
+To run our container we just have to execute:
+
 ```
 docker run --rm -p 8000:8000 plumber-example
 ```
