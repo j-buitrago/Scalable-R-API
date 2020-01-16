@@ -38,4 +38,4 @@ docker run --rm -p 8000:8000 plumber-example
 
 
 
-https://github.com/j-buitrago/Scalable-R-API/blob/master/images/DockerRunning.png
+![DockerRunning](https://github.com/j-buitrago/Scalable-R-API/blob/master/images/DockerRunning.png)
