@@ -25,7 +25,8 @@ Rscript ./R/createModel.R
 docker pull rocker/r-ver:3.5.0
 ```
 
-- Now we can create our docker container with our Plumber API
+- Now we can create our docker container with our Plumber API. Necessary information to build the container is in 
+```./dockerfile```
 ```
 docker build -t plumber-example .
 ```
