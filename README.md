@@ -16,3 +16,16 @@ Execute this command to create the object ```RfModel.RDS```
 ```
 Rscript ./R/createModel.R
 ```
+
+## Build a Docker container 
+
+- I will use a previous image of R (3.5.0). To pull this image run:
+
+```
+docker pull rocker/r-ver:3.5.0
+```
+
+- Now we can create our docker container with our Plumber API
+```
+docker build -t plumber-example .
+```
