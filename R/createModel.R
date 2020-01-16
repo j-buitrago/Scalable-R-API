@@ -1,4 +1,3 @@
-# Create the model to use
 data <- mtcars
 
 data$cyl <- as.factor(data$cyl)
