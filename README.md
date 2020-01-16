@@ -53,5 +53,5 @@ Nice, we can use our model but what happen if we do this request first and immed
 curl http://127.0.0.1/asynchronousTest
 ```
 
-If we go to the file ```./R/PredictRf``` we can check that asynchronousTest just wait 5 seconds and return "OK".
-We can use this function to check that our API is synchronous.
+If we go to the file ```./R/PredictRf``` we can check that ```asynchronousTest``` just wait 5 seconds and return "OK".
+We can use this function to check that our API is synchronous for now.
