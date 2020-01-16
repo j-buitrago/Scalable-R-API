@@ -102,3 +102,9 @@ At this point you would have an asynchronous API thanks to Kubernetes! To check 
 ![ThreePods](https://github.com/j-buitrago/Scalable-R-API/blob/master/images/ThreePods.png)
 
 
+## Resources
+
+https://kubernetes.io/docs/tutorials/stateless-application/expose-external-ip-address/
+https://medium.com/tmobile-tech/using-docker-to-deploy-an-r-plumber-api-863ccf91516d
+https://kubernetes.io/docs/setup/learning-environment/minikube/
+https://kubernetes.io/docs/concepts/overview/working-with-objects/kubernetes-objects/
