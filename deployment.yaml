@@ -1,0 +1,22 @@
+apiVersion:  apps/v1 
+kind: Deployment
+metadata:
+  name: plumber-example
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: plumber-example
+  template:
+    metadata:
+      labels:
+        app: plumber-example
+    spec:
+      containers:
+      - name: plumber-example
+        image: plumber-example
+        imagePullPolicy: Never
+        ports:
+        - containerPort: 8000
+        
+
