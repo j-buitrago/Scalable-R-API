@@ -4,7 +4,7 @@
 
 The main purpouse of this project is provide a method to create a scalable API using R. The easiest way to create a API in R is using Plumber package <https://cran.r-project.org/web/packages/plumber/index.html>
 
-If you are used this package you probaly know that by default, plumber allows you to create an asynchronous API. This is a serious problem if you want to use it in a production environment. There are probably many methods to avoid this, in this project I'm going to use Docker and Kubernetes to make it possible.
+If you are used this package you probably know that by default, plumber allows you to create a synchronous API. This is a serious problem if you want to use it in a production environment. There are probably many methods to avoid this, in this project I'm going to use Docker and Kubernetes for trying to fix this problem.
 
 
 ## Create a simple ML model
@@ -36,6 +36,21 @@ docker build -t plumber-example .
 docker run --rm -p 8000:8000 plumber-example
 ```
 
-
+If everything is working correctly you should see something like this:
 
 ![DockerRunning](https://github.com/j-buitrago/Scalable-R-API/blob/master/images/DockerRunning.png)
+
+
+It's time to use our API to make predictions, if you run the next command you have to receive: ["6"], the prediction of our Random Forest model.
+
+```
+curl -d '{"data":{"mpg":21,"disp":160,"hp":100,"drat":3.9,"wt":2.62,"qsec":16.46,"vs":0,"am":1,"gear":4,"carb":4}}' http://127.0.0.1/prediction
+```
+Nice, we can use our model but what happen if we do this request first and immediately we try to make a prediction? Our prediction will need five seconds...
+
+```
+curl http://127.0.0.1/asynchronousTest
+```
+
+If we go to the file ```./R/PredictRf``` we can check that asynchronousTest just wait 5 seconds and return "OK".
+We can use this function to check that our API is synchronous.
