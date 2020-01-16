@@ -35,3 +35,7 @@ docker build -t plumber-example .
 ```
 docker run --rm -p 8000:8000 plumber-example
 ```
+
+
+
+https://raw.githubusercontent.com/j-buitrago//Scalable-R-API/master/images/DockerRunning.png
