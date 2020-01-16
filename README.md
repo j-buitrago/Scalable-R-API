@@ -55,3 +55,15 @@ curl http://127.0.0.1/asynchronousTest
 
 If we go to the file ```./R/PredictRf``` we can check that ```asynchronousTest``` just wait 5 seconds and return "OK".
 We can use this function to check that our API is synchronous for now.
+
+## Kubernetes to scale R API
+
+To use Kubernetes I'm goin to use minikube, here you have documentation to install it: https://kubernetes.io/es/docs/tasks/tools/install-minikube/
+
+Start our Kubernetes cluster:
+
+```
+minikube start
+eval $(minikube docker-env)
+kubectl apply -f deployment.yaml
+```
