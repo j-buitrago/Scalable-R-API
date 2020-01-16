@@ -67,7 +67,7 @@ minikube start
 eval $(minikube docker-env)
 kubectl apply -f deployment.yaml
 ```
-You can check you have a pod named plumber-exmaple-... running:
+You can check you have a pod named plumber-example-... running:
 
 ```
 kubectl get pods --output=wide
