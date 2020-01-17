@@ -12,4 +12,4 @@ COPY ./R/PredictRf.R ./R/rfModel.RDS /
 
 EXPOSE 8000
 
-ENTRYPOINT ["R", "-e", "pr <- plumber::plumb('./PredictRf.R'); pr$run(host='0.0.0.0', port=8000)"]
+ENTRYPOINT ["R", "-e", "p <- plumber::plumb('./PredictRf.R'); pr$run(host='0.0.0.0', port=8000)"]
