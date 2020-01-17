@@ -58,7 +58,7 @@ We can use this function to check that our API is synchronous for now.
 
 ## Kubernetes to scale R API
 
-To use Kubernetes I'm goin to use minikube, here you have documentation to install it: https://kubernetes.io/es/docs/tasks/tools/install-minikube/
+To use Kubernetes I'm going to use minikube, here you have documentation to install it: https://kubernetes.io/es/docs/tasks/tools/install-minikube/
 
 Start our Kubernetes cluster:
 
