@@ -79,7 +79,7 @@ We have to expose our service for being able to consume our API.
 kubectl expose deployment plumber-example --type=LoadBalancer --name=plumber-service
 ```
 
-Using minikube you can now ip and port of the API running
+Using minikube you can know ip and port of the API running
 
 ```
 minikube service plumber-service
