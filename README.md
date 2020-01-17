@@ -11,7 +11,7 @@ If you are used this package you probably know that by default, plumber allows y
 
 To use a real model, we can create it with the popular dataset ```mtcars```. The objective is not create a great model, we are just doing it to simulate a real situation of a ML model doing predictions via API.
 
-Execute this command to create the object ```RfModel.RDS```. I recommend trimmer package (<https://cran.r-project.org/web/packages/trimmer/index.html>) to simplify you ML model.
+Execute this command to create the object ```RfModel.RDS```. I recommend trimmer package (<https://cran.r-project.org/web/packages/trimmer/index.html>) to simplify your ML model.
 
 ```
 Rscript ./R/createModel.R
